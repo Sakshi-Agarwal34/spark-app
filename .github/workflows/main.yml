@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - "output/untitled.ipynb"
+      - "untitled.ipynb"
 
 jobs:
   deploy:
@@ -37,8 +37,8 @@ jobs:
       - name: Upload Notebook
         run: |
           databricks workspace import \
-          spark-demo/advance-spark.ipynb \
-          /Shared/advance-spark \
+          untitled.ipynb \
+          /Shared/spark-app \
           --language PYTHON \
           --format JUPYTER \
           --overwrite
